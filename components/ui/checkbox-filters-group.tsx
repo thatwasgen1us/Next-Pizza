@@ -18,7 +18,7 @@ interface Props {
   className?: string;
 }
 
-export const CheckboxFiltersGroup: React.FC<Props> = ({ className, title, items, defaultItems, limit = 5, searchPlaceholder = 'Поиск', onChange, defaultValue }) => {
+export const CheckboxFiltersGroup: React.FC<Props> = ({ className, title, items, defaultItems, limit = 5, searchPlaceholder = 'Поиск', }) => {
   const [showAll, setShowAll] = useState(false)
   const [searchValue, setSearchValue] = useState('')
 
@@ -42,7 +42,7 @@ export const CheckboxFiltersGroup: React.FC<Props> = ({ className, title, items,
 
       <div className='flex flex-col gap-4 max-h-96 pr-2 overflow-auto scrollbar'>
         {
-          list.map((item, index) => (
+          list.map((item) => (
             <FilterCheckbox
               key={item.value} 
               text={item.text} 
